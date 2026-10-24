@@ -1,0 +1,55 @@
+[project]
+name = "windwatch"
+version = "2.0.0"
+description = "GB day-ahead wind forecast monitor for January 2026 purchase decisions."
+readme = { text = "GB day-ahead wind forecast monitor for January 2026 purchase decisions.", content-type = "text/plain" }
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.6",
+    "uvicorn[standard]>=0.34.0",
+    "pydantic>=2.14.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
+    "httpx>=0.28.1",
+    "ruff>=0.9.0",
+    "mypy>=1.14.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.4",
+    "httpx>=0.28.1",
+    "ruff>=0.9.0",
+    "mypy>=1.14.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+cache_dir = ".pytest_cache"
+filterwarnings = [
+    "ignore::DeprecationWarning:starlette.testclient.*",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "I", "UP", "SIM"]
+ignore = ["B008"]  # Allow FastAPI Depends() in default arguments
+
+[tool.mypy]
+python_version = "3.11"
+mypy_path = "."
+explicit_package_bases = true
+ignore_missing_imports = true
+warn_unused_ignores = true
+show_error_codes = true
