@@ -218,3 +218,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# WindWatch
+node_modules/
+frontend/dist/
+backend/static/
+.cache_*.json

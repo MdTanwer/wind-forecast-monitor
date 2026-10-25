@@ -1,0 +1,26 @@
+[
+  {
+    "dataset": "WINDFOR",
+    "publishTime": "2026-01-14T04:30:00Z",
+    "startTime": "2026-01-15T00:00:00Z",
+    "generation": 5120.0
+  },
+  {
+    "dataset": "WINDFOR",
+    "publishTime": "2026-01-14T04:30:00Z",
+    "startTime": "2026-01-15T01:00:00Z",
+    "generation": 4980.0
+  },
+  {
+    "dataset": "WINDFOR",
+    "publishTime": "2026-01-14T07:30:00Z",
+    "startTime": "2026-01-15T00:00:00Z",
+    "generation": 5300.0
+  },
+  {
+    "dataset": "WINDFOR",
+    "publishTime": "2026-01-15T12:00:00Z",
+    "startTime": "2026-01-15T10:00:00Z",
+    "generation": 9999.0
+  }
+]
